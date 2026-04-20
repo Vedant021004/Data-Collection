@@ -1,4 +1,4 @@
-<h1 align="center">🟢 Vedant.OS 🟢</h1>
+<h1 align="center">🟢 Vedant.OSh 🟢</h1>
 
 <p align="center">
   <img src="https://readme-typing-svg.herokuapp.com?color=00FF00&size=30&center=true&vCenter=true&width=900&lines=Booting+Vedant+OS...;Initializing+Kernel...;Loading+DevOps+Modules...;AI+Systems+Online...;Access+Granted+🚀" />

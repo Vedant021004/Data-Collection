@@ -1,5 +1,5 @@
 
-# 🚀 Mastering `pandas.read_csv()` – From Beginner to Data Engineer
+#  Mastering `pandas.read_csv()` – From Beginner to Data Engineer
 
 ## 📌 Why `read_csv()` Matters
 

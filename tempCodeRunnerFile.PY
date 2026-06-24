@@ -35,3 +35,12 @@ rating = soup.find_all(
 
 for i in rating:
     print(i.text.strip())
+
+
+review = soup.find_all(
+     "span",
+    class_="companyCardWrapper__companyRatingCount"
+)
+
+for re in review:
+    print(re.text.strip())

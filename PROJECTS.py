@@ -62,3 +62,72 @@ for review in all_stars:
 print("\nFeedback")
 for new in all_reviews:
     print(new)
+
+
+# Data Cleaning 
+
+df = pd.DataFrame({
+    "Name": all_names,
+    "Price": all_prices,
+    "Description": all_description,
+    "Rating": all_stars,
+    "Reviews": all_reviews
+})
+
+print(df.head())
+
+df["Price"] = df["Price"].str.replace("$", "", regex=False)
+df["Price"] = df["Price"].astype(float)
+
+# Line Graph
+plt.figure(figsize=(10,5))
+
+plt.plot(df["Name"], df["Price"], marker="o")
+
+plt.xticks(rotation=90)
+
+plt.grid(True)
+
+plt.show()
+
+
+# Bar Graph
+plt.figure(figsize=(10,5))
+
+plt.bar(df["Name"], df["Price"])
+
+plt.xticks(rotation=90)
+
+plt.show()
+
+
+# Pie Chart
+rating_count = df["Rating"].value_counts()
+
+plt.figure(figsize=(6,6))
+
+plt.pie(
+    rating_count,
+    labels=rating_count.index,
+    autopct="%1.1f%%"
+)
+
+plt.title("Rating Distribution")
+
+plt.show()
+
+
+# Price vs review
+
+plt.figure(figsize=(8,5))
+
+plt.scatter(df["Reviews"], df["Price"])
+
+plt.xlabel("Reviews")
+plt.ylabel("Price")
+
+plt.title("Reviews vs Price")
+
+plt.grid(True)
+
+plt.show()

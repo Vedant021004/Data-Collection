@@ -18,7 +18,6 @@ soup = BeautifulSoup(
 
 company = soup.find_all(
     "div",
-    class_ = "companyCardWrapper__primaryInformation "
+    class_ = "companyCardWrapper__primaryInformation"
 )
 
-print(len(company))

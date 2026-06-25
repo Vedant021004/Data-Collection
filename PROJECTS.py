@@ -43,25 +43,42 @@ for page in range(1, 3):
         all_reviews.append(feedback.text.strip())    
 
 
-print("Names")
-for name in all_names:
-    print(name)
+for name, price, description, rating, review in zip(
+    all_names,
+    all_prices,
+    all_description,
+    all_stars,
+    all_reviews
+):
+    print(f"""
+Name        : {name}
+Price       : {price}
+Description : {description}
+Rating      : {rating}
+Reviews     : {review}
+{'-'*60}
+""")        
 
-print("\nPrices")
-for price in all_prices:
-    print(price)
 
-print("\nDescription")
-for details in all_description:
-    print(details)
+# print("Names")
+# for name in all_names:
+#     print(name)
 
-print("\nRating")    
-for review in all_stars:
-    print(review)
+# print("\nPrices")
+# for price in all_prices:
+#     print(price)
 
-print("\nFeedback")
-for new in all_reviews:
-    print(new)
+# print("\nDescription")
+# for details in all_description:
+#     print(details)
+
+# print("\nRating")    
+# for review in all_stars:
+#     print(review)
+
+# print("\nFeedback")
+# for new in all_reviews:
+#     print(new)
 
 
 # Data Cleaning 
